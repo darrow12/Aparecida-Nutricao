@@ -73,7 +73,11 @@
 		</main>
 
 		<script>
-			console.log(document.querySelector("h1"));
+			var titulo = document.querySelector("h1");
+
+			titulo.textContent = "Banana";
+			
+			// console.log(titulo); | Retorna a mesma coisa de antes
 			// Boa prática: colocar a tag <script> no final do código para que a DOM possa encontrar todos os elementos
 			// DOM: Representação do mundo HTML para o JavaScript
 		</script>
