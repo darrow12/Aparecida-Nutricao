@@ -1,13 +1,27 @@
-console.log("Estou em outro arquivo");
-
-var titulo = document.querySelector(".tituloAN");
-
+const titulo = document.querySelector(".tituloAN");
 titulo.textContent = "Banana";
 
-/*
-  * O navegador, ao ler o seu arquivo HTML, cria uma cópia em memória daquele HTML e a partir dessa cópia ele vai desenhando a sua página, colocando as tags e aplicando os estilos. Esta cópia é o que chamamos de DOM uma representação em memória do HTML do seu arquivo, que o navegador usa para desenhar a página, e a variável document é quem contêm o DOM.
+// Catching the ID of the first patient
+const paciente = document.querySelector("#primeiro-paciente")
 
-  * Por isso, quando dizemos que com o Javascript nós estamos manipulando o DOM, estamos manipulando o que o navegador renderizou. Então ao trocar algum texto do DOM, o navegador imediatamente desenha novamente aquele texto, pois o DOM é o que o navegador usa para desenhar o seu site.
+// Catching the weight of the patient
+const tdPeso = paciente.querySelector(".info-peso");
+const peso = tdPeso.textContent;
 
-  * Outra caracteristica interessante, é que como manipulamos o DOM , quando trocamos um texto de um <h1> ou um estilo de um elemento, na verdade estamos alterando a representação em memória , o que faz com que o arquivo fonte que contêm seu HTML fique intacto!
-*/
+// Catching the height of the patient
+const tdAltura = paciente.querySelector(".info-altura");
+const altura = tdAltura.textContent;
+
+const imc = peso / (altura * altura);
+// const imc = peso / altura * (altura);
+// const imc = (peso / altura) * altura;
+
+console.log(paciente);
+console.log(tdPeso);
+console.log(peso);
+console.log(altura);
+console.log(imc);
+// console.log("Resultado do IMC do Paulo é: " + peso/altura*altura);
+
+const resultadoIMC = document.querySelector(".info-imc");
+resultadoIMC.textContent = imc;
