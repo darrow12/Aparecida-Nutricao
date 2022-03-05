@@ -21,12 +21,15 @@ for(var i = 0; i < pacientes.length; i++) {
     console.log("Peso inválido!");
     pesoValido = false;
     resultadoIMC.textContent = "Peso inválido!";
+    paciente.classList.add("paciente-invalido");
+    // paciente.style.backgroundColor = "lightcoral";
   }
   
   if (altura <= 0 || altura >= 3.0) {
     console.log("Altura inválida!");
     alturaValida = false;
     resultadoIMC.textContent = "Altura inválida!";
+    paciente.classList.add("paciente-invalido");
   }
   
   if (pesoValido && alturaValida) {
