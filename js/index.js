@@ -1,3 +1,6 @@
+// Changing the title
+const titulo = document.querySelector('.tituloAN');
+
 // Catching the ID of all the patients in HTML
 const pacientes = document.querySelectorAll(".paciente");
 
@@ -37,3 +40,12 @@ for(var i = 0; i < pacientes.length; i++) {
     resultadoIMC.textContent = imc.toFixed(2);
   }
 }
+
+// titulo.addEventListener("click", () => {
+//   console.log("Estou sendo clicado!");
+// });
+
+const botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function() {
+  console.log("Cliquei no botão!");
+})
