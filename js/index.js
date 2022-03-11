@@ -51,6 +51,24 @@ botaoAdicionar.addEventListener("click", (event) => {
   const altura = form.altura.value;
   const gordura = form.gordura.value;
 
-  console.log(nome, peso, altura, gordura); // Imprime todos os valores
-  // console.log(form.altura.value) // Imprime o input de altura quando clicado no botão, e o seu valor quando adicionado .value
+  const pacienteTr = document.createElement("tr");
+  const nomeTd = document.createElement("td");
+  const pesoTd = document.createElement("td");
+  const alturaTd = document.createElement("td");
+  const gorduraTd = document.createElement("td");
+  const imcTd = document.createElement("td");
+
+  nomeTd.textContent = nome;
+  pesoTd.textContent = peso;
+  alturaTd.textContent = altura;
+  gorduraTd.textContent = gordura;
+
+  pacienteTr.appendChild(nomeTd);
+  pacienteTr.appendChild(pesoTd);
+  pacienteTr.appendChild(alturaTd);
+  pacienteTr.appendChild(gorduraTd);
+
+  const tabela = document.querySelector("#tabela-pacientes");
+
+  tabela.appendChild(pacienteTr);
 })
