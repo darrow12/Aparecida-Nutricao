@@ -44,5 +44,13 @@ for(var i = 0; i < pacientes.length; i++) {
 const botaoAdicionar = document.querySelector("#adicionar-paciente");
 botaoAdicionar.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("Sou um botão, e fui clicado");
+  
+  const form = document.querySelector("#form-adiciona");
+  const nome = form.nome.value;
+  const peso = form.peso.value;
+  const altura = form.altura.value;
+  const gordura = form.gordura.value;
+
+  console.log(nome, peso, altura, gordura); // Imprime todos os valores
+  // console.log(form.altura.value) // Imprime o input de altura quando clicado no botão, e o seu valor quando adicionado .value
 })
